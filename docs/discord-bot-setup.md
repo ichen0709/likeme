@@ -83,13 +83,14 @@ bot token 是一長串英數字（長得像 `MTIzNDU2Nzg5...` 加上很多點與
 1. 在左邊選單點 **「OAuth2」**。
 2. 往下捲，找到 **「OAuth2 URL Generator」**（OAuth2 網址產生器）。
 3. 在 **「Scopes」**（範圍）區塊，只勾選 **`bot`**。其他都不要勾（特別是不要勾 `applications.commands`，這個專案沒有斜線指令）。
-4. 勾了 `bot` 之後，下面會出現 **「Bot Permissions」**（Bot 權限）區塊。只勾這三項：
+4. 勾了 `bot` 之後，下面會出現 **「Bot Permissions」**（Bot 權限）區塊。只勾這四項：
 
    | 要勾的權限 | 用途 |
    |---|---|
    | **View Channels**（檢視頻道） | 能看到頻道裡的訊息 |
    | **Send Messages**（發送訊息） | 能回覆「處理中」和結果，也能編輯自己發的訊息 |
    | **Read Message History**（讀取訊息歷史） | 回覆時要指定「回覆哪一則訊息」，需要這個權限 |
+   | **Add Reactions**（新增反應） | 收到照片時，對那則訊息加上 ⏳ 表示收到 |
 
    **其他一律不要勾**，尤其不要勾 Administrator（管理員）。權限越少，萬一出事影響越小。
 5. 最下面會出現 **「Generated URL」**（產生的網址）。點旁邊的 **「Copy」**。
@@ -99,7 +100,7 @@ bot token 是一長串英數字（長得像 `MTIzNDU2Nzg5...` 加上很多點與
 1. 打開瀏覽器新分頁，貼上剛才複製的網址，按 Enter。
 2. 畫面會問「要把 bot 加到哪個伺服器」。下拉選單裡選**你自己建的那個伺服器**（例如 `食物熱量測試`）。
 3. 點 **「繼續」**（Continue）。
-4. 確認畫面列出的權限就是上面那三項，點 **「授權」**（Authorize）。
+4. 確認畫面列出的權限就是上面那四項，點 **「授權」**（Authorize）。
 5. 如果出現「我不是機器人」的驗證，照指示完成。
 
 ### 4-3. 確認 bot 進來了
@@ -108,7 +109,7 @@ bot token 是一長串英數字（長得像 `MTIzNDU2Nzg5...` 加上很多點與
 
 ### 4-4. 如果你的 `# 食物照片` 是私人頻道
 
-在頻道名稱旁邊點齒輪（編輯頻道）→ **「權限」**（Permissions）→ **「新增成員或身分組」**，選 bot，並確認它有上面三項權限。如果是公開頻道（建議這樣），這一步不用做。
+在頻道名稱旁邊點齒輪（編輯頻道）→ **「權限」**（Permissions）→ **「新增成員或身分組」**，選 bot，並確認它有上面四項權限。如果是公開頻道（建議這樣），這一步不用做。
 
 ---
 
@@ -159,7 +160,7 @@ bot token 是一長串英數字（長得像 `MTIzNDU2Nzg5...` 加上很多點與
 
 - [ ] Developer Portal 裡有你的 application，Bot 頁面的 **Message Content Intent 是開的，且已按 Save Changes**。
 - [ ] Public Bot 已關閉。
-- [ ] 邀請 bot 時**只勾了** View Channels、Send Messages、Read Message History 三項權限。
+- [ ] 邀請 bot 時**只勾了** View Channels、Send Messages、Read Message History、Add Reactions 四項權限。
 - [ ] 你的伺服器成員清單裡看得到 bot（離線是正常的）。
 - [ ] `C:\Users\PC02\likeme\.env` 存在，檔名不是 `.env.txt`，裡面四行都有值。
 - [ ] `git status` 沒有顯示 `.env`。
